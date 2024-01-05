@@ -1,0 +1,366 @@
+@font-face {
+    font-family: firaLight;
+    src: url(/Fonts/FiraSans.ttf);
+}
+
+@font-face {
+    font-family: fira;
+    src: url(/Fonts/FiraSans.ttf);
+}
+
+@font-face {
+    font-family: anton;
+    src: url(/Fonts/Anton.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #0B0B14;
+    color: #F2EDE2;
+}
+
+.glare {
+    height: 30vw;
+    width: 80vw;
+    background-color: #060672;
+    position: absolute;
+    top: -30%;
+    left: 15%;
+    filter: blur(120px);
+    border-radius: 50%;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+}
+
+nav h2 {
+    font-weight: 100;
+    color: #F2EDE2;
+    font-family: firaLight;
+    font-size: .8vw;
+}
+
+.navCenter img {
+    width: 12vw;
+}
+
+.navLeft,
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: .65vw;
+}
+
+.navLeft i,
+.navRight i {
+    font-size: 1.2vw;
+}
+
+.page1 {
+    height: 100vh;
+    position: relative;
+    padding: 0 9.5vw;
+}
+
+.page1 h1 {
+    color: #F2EDE2;
+    font-family: anton;
+    font-size: 7vw;
+    line-height: 8vw;
+    font-weight: 100;
+}
+
+.page1 h1 span {
+    color: #3333E8;
+    position: absolute;
+}
+
+.page1 h1 span:hover {
+    filter: blur(2px);
+    animation: shake 0.01s infinite linear alternate;
+}
+
+.page1 h1 img {
+    height: 6vw;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(80%);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0)
+    }
+
+    25% {
+        transform: translate(2px, -2px);
+    }
+
+    50% {
+        transform: translate(-2px, 2px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+.page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0 2vw;
+}
+
+.images {
+    background-image: url("https://bataclan-medias.s3.eu-west-3.amazonaws.com/tesseract_1920_c81083e9cf.jpg");
+    background-position: center;
+    background-size: cover;
+    filter: brightness(70%);
+    border-radius: 30px;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: -10%;
+    width: 94%;
+    transition: cubic-bezier(0.38, 0.005, 0.215, 1) .8s;
+}
+
+.elem {
+    position: relative;
+    display: flex;
+    z-index: 9;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f2ede237;
+    margin: 0 8vw;
+}
+
+.elemLeft {
+    display: flex;
+    align-items: baseline;
+}
+
+.elemLeft h1 {
+    font-family: anton;
+    font-size: 5vw;
+    font-weight: 100;
+    color: #f2ede237;
+    transition: all ease 1s;
+}
+
+.elem:hover .elemLeft h1 {
+    color: #0000e6;
+}
+
+.elem:hover .elemRight {
+    /* transition: all ease .5s; */
+    opacity: 1;
+}
+
+.elem:hover .elemLeft p {
+    /* transition: all ease .5s; */
+    opacity: 1;
+}
+
+.elemLeft p {
+    font-family: firaLight;
+    font-size: 1vw;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.elemRight {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+.calen {
+    display: flex;
+    align-items: center;
+}
+
+.calen h3 {
+    font-size: 1vw;
+    font-family: firaLight;
+    font-weight: 100;
+}
+
+.calen h1 {
+    font-size: 4vw;
+    line-height: 4vw;
+    font-family: anton;
+    font-weight: 100;
+}
+
+.elemRight h2 {
+    font-size: 1.5vw;
+    line-height: 1.6vw;
+    font-family: anton;
+    font-weight: 100;
+}
+
+.button {
+    background-color: #0000e6;
+    padding: .8vw 2vw;
+    transition: all ease .5s;
+    border-radius: 50px;
+}
+
+.button:hover {
+    background-color: #3333E8;
+}
+
+.elemRight .button h3 {
+    font-size: 1.2vw;
+    font-family: firaLight;
+    font-weight: 100;
+}
+
+.page3 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page3 img {
+    background-size: cover;
+    position: absolute;
+    top: -15%;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    opacity: .2;
+}
+
+.page3Elements {
+    padding: 10vw 25.5vw;
+}
+
+.page3 p {
+    color: #3333E8;
+    font-family: firaLight;
+    opacity: 1;
+}
+
+.page3 h1 {
+    padding-top: 10px;
+    color: #fff;
+    font-weight: 100;
+    font-family: firaLight;
+    font-size: 3vw;
+    line-height: 3vw;
+    /* text-align: center; */
+}
+
+footer {
+    min-height: 120vh;
+    width: 95%;
+    margin: 10vw 2vw;
+    position: relative;
+}
+
+.footerContent{
+    /* padding: 2vw; */
+    border: 1px solid #f2ede237;
+    border-radius: 20px;
+
+}
+
+.footerP1,
+.footerP2,
+.footerP3 {
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: firaLight;
+}
+
+.footerContent>h1{
+    padding-left: 2vw;
+    font-weight: 100;
+    font-size: 7vw;
+    font-family: anton;
+    
+}
+
+.footerContent>p{
+    padding-left: 2vw;
+    font-weight: 100;
+    font-family: firaLight;
+    padding-bottom: 3vw;
+}
+
+.footerP1{
+    width: 45%;
+}
+
+.footerP1 h3{
+    font-weight: 100;
+    color: #737271;
+    font-size: 1vw;
+}
+
+.footerP1 h2{
+    padding-top: 1vw;
+    font-weight: 100;
+    font-size: 1vw;
+}
+
+.footerP2{
+    border-top: 1px dashed #F2EDE2;
+    border-bottom: 1px dashed #F2EDE2;
+    padding: 2vw 0 ;
+    margin: 4vw 0;
+}
+
+.footerP2-left{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footerP2-right {
+    display: flex;
+    padding-right: 2vw;
+    gap: 2vw;
+}
+
+.footerP2 h1{
+    padding-left: 2vw;
+    font-family: anton;
+    font-weight: 100;
+    font-size: 2.5vw;
+}   
+
+.footerP3-left a{
+    color: #F2EDE2;
+    padding-right: 2vw;
+    text-decoration: none;
+    font-family: firaLight;
+    font-weight: 100;
+    font-size: .7vw;
+}
+
+.footerP3-right p{
+    font-size: .7vw;
+}
