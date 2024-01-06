@@ -4,13 +4,13 @@
 }
 
 @font-face {
-    font-family: fira;
-    src: url(/Fonts/FiraSans.ttf);
+    font-family: anton;
+    src: url(/Fonts/Anton.ttf);
 }
 
 @font-face {
-    font-family: anton;
-    src: url(/Fonts/Anton.ttf);
+    font-family: renie;
+    src: url(/Fonts/Renie.ttf);
 }
 
 * {
@@ -371,4 +371,104 @@ footer {
 
 .footerP3-right p{
     font-size: .7vw;
+}
+
+.page4 {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    text-align: center;
+}
+
+.page4>h1{
+    padding: 5vw 0;
+    font-size: 7vw;
+    font-family: anton;
+    font-weight: 100;
+}
+
+.outerImage{
+    position: relative;
+}
+
+.innerImage{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    text-align: center;
+    /* padding-bottom: 1vw; */
+}
+
+.innerImage h1{
+    /* top: -10px; */
+    color: #002284;
+    font-family: renie;
+    font-size: 30px;
+}
+
+.outerImage img{
+    height: 360px;
+    width: 300px;
+}
+
+.innerImage img{
+    height: 270px;
+    width: 270px;
+    background-position: center;
+    background-size: cover;
+}
+
+.imageStack {
+    white-space: nowrap;
+    overflow-x: auto;
+    /* margin-bottom: 4vw; */
+}
+
+.imageStack::-webkit-scrollbar {
+    display: none;
+}
+
+.move {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move1;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.move2 {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move2;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.imageStack .outerImage {
+    padding-left: 1.5vw;
+    font-size: 9vw;
+    display: inline-block;
+}
+
+@keyframes move1 {
+    to {
+        transform: translateX(-100%);
+    }
+
+    from {
+        transform: translateX(0);
+    }
+}
+
+@keyframes move2 {
+    to {
+        transform: translateX(0);
+    }
+
+    from {
+        transform: translateX(-100%);
+    }
 }

@@ -66,7 +66,6 @@ gsap.from(".elems .elem", {
         scroller: "main",
         start: "top 90%",
         end: "top 0",
-        markers:true,
         scrub: true,
     }
 })
